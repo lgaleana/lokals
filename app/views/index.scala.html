@@ -66,7 +66,7 @@
 		$("#touristBtn").click(function() {
 			$.ajax({
 				method: "POST",
-				url: "",
+				url: "signup",
 				data: {"type": "tourist", "email": $("#tourist").val()},
 				success: function() {
 					$("#tourist-group").addClass("hidden");
@@ -74,11 +74,11 @@
 			});
 		});
 
-		$("#touristBtn").click(function() {
+		$("#localBtn").click(function() {
 			$.ajax({
 				method: "POST",
-				url: "",
-				data: {"type": "local", "email": $("#tourist").val()},
+				url: "signup",
+				data: {"type": "local", "email": $("#local").val()},
 				success: function() {
 					$("#local-group").addClass("hidden");
 				}

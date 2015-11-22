@@ -54,7 +54,7 @@ class Application extends Controller {
     val user = userParamsBinding.bindFromRequest.get
     val fw   = new FileWriter("signups.txt", true)
     try {
-      fw.write(user.toString)
+      fw.write(user.toString + "\n")
     } finally fw.close()
     NoContent
   }
