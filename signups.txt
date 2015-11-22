@@ -1,1 +1,0 @@
-UserParams(tourist,hola)UserParams(local,hola2)
