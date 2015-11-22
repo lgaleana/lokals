@@ -1,0 +1,90 @@
+.navbar {
+	background-color: #222;
+	border-color: #090909;
+	border-radius: 0;
+	margin: 0;
+}
+.navbar-inverse .navbar-brand {
+	color: white;
+}
+
+.left-pic, .right-pic {
+	height: 380px;
+	padding: 0 9%;
+}
+.left-pic {
+	text-align: right;
+	background: url(../images/tourist.jpg) no-repeat center center;               
+	-webkit-background-size: cover; 
+	-moz-background-size: cover; 
+	-o-background-size: cover;   
+	background-size: cover;
+}
+.right-pic {
+	background: url(../images/local.jpg) no-repeat center center;               
+	-webkit-background-size: cover; 
+	-moz-background-size: cover; 
+	-o-background-size: cover;   
+	background-size: cover;
+}
+.big {
+	font-size: 43px;
+}
+.user-copy {
+	font-family: 'Montserrat', sans-serif;
+	margin-top: 110px;
+	color: white;
+	font-weight: 700;
+}
+.user-copy h2 {
+	background: rgba(0, 0, 0, 0.7);
+	border-radius: 4px;
+	padding: 10px 20px;
+}
+.input-group {
+	margin-top: 20px;
+}
+.email {
+	font-size: 20px;
+	height: 45px;
+}
+.btn-default, .btn-default:hover {
+	color: #fff;
+	background-color: #1F8ABF;
+	border-color: #186a93;
+	font-family: "museo-slab",Georgia,"Times New Roman",Times,serif;
+	font-size: 22px;
+}
+
+.description {
+	padding-top: 60px;
+	padding-bottom: 90px;
+}
+.description-left, .description-right {
+	padding: 0 9%;
+}
+.general {
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	font-size: 18px;
+	margin-top: 60px;
+}
+.header {
+	color: #777;
+	font-size: 21px;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+}
+.type {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+}
+
+.footer {
+	background: #161616;
+	padding-top: 30px;
+	padding-bottom: 50px;
+	font-size: 12px;
+	color: #737373;
+	text-align: right;
+}

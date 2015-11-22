@@ -10,6 +10,10 @@ class Application extends Controller {
 
   val (chatOut, chatChannel) = Concurrent.broadcast[JsValue]
 
+	def index = Action {
+    Ok(views.html.index())
+  }
+
   // Central hub for distributing chat messages
   def chat = Action { implicit req =>
     Ok(views.html.chat(routes.Application.chatFeed, routes.Application.postMessage))

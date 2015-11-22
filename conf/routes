@@ -3,6 +3,7 @@
 # ~~~~
 
 # Home page
+GET 		/														controllers.Application.index
 GET     /chat                       controllers.Application.chat
 
 POST    /post                       controllers.Application.postMessage
