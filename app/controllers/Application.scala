@@ -5,6 +5,10 @@ import play.api.libs.iteratee.{Enumeratee, Enumerator, Concurrent}
 import play.api.libs.json.{Json, JsValue}
 import play.api.mvc._
 import play.api.libs.concurrent.Execution.Implicits._
+import play.api.data.Form
+import play.api.data.Forms._
+
+import java.io.FileWriter
 
 class Application extends Controller {
 
@@ -45,5 +49,23 @@ class Application extends Controller {
     chatChannel.push(req.body)
     Ok
   }
+
+  def userSignup = Action(parse.json) { implicit req =>
+    val user = userParamsBinding.bindFromRequest.get
+    val fw   = new FileWriter("signups.txt", true)
+    try {
+      fw.write(user.toString)
+    } finally fw.close()
+    NoContent
+  }
+
+  private val userParamsBinding = Form(
+    mapping(
+      "type" -> nonEmptyText,
+      "email" -> nonEmptyText
+    )(UserParams.apply)(UserParams.unapply)
+  )
+
+  case class UserParams(`type`: String, email: String)
 
 }
