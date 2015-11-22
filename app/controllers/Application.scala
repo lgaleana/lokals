@@ -11,8 +11,8 @@ class Application extends Controller {
   val (chatOut, chatChannel) = Concurrent.broadcast[JsValue]
 
   // Central hub for distributing chat messages
-  def index = Action { implicit req =>
-    Ok(views.html.index(routes.Application.chatFeed, routes.Application.postMessage))
+  def chat = Action { implicit req =>
+    Ok(views.html.chat(routes.Application.chatFeed, routes.Application.postMessage))
   }
 
   // Detects disconnect SSE stream
@@ -22,7 +22,7 @@ class Application extends Controller {
   def welcome = Enumerator.apply[JsValue](
     Json.obj(
       "user"    -> "Local",
-      "message" -> "Bienvenido! Dinos si estás buscando entretenimiento, cultura o comida"
+      "message" -> "Hola, ¿cómo estás, qué te puedo recomendar: comida, entretenimiento o cultura?"
     )
   )
 

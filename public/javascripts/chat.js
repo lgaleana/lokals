@@ -1,6 +1,6 @@
 window.Chat = function(streamUrl, postUrl) {
   var ENTER = 13;
-  var user = prompt("What should your user name be");
+  var user = prompt("Por favor ingresa tu nombre");
   $("input").on("keyup", function(e) {
     if( e.keyCode != 13)
       return;
