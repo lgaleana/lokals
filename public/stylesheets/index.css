@@ -8,6 +8,10 @@
 	color: white;
 }
 
+.navbar-brand {
+  font-size: 45px;
+}
+
 .left-pic, .right-pic {
 	height: 380px;
 	padding: 0 9%;
