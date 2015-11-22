@@ -22,7 +22,7 @@ class Application extends Controller {
   def welcome = Enumerator.apply[JsValue](
     Json.obj(
       "user"    -> "Local",
-      "message" -> "Welcome! Write a message and hit ENTER!"
+      "message" -> "Bienvenido! Dinos si estás buscando entretenimiento, cultura o comida"
     )
   )
 
