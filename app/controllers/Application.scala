@@ -50,7 +50,7 @@ class Application extends Controller {
     Ok
   }
 
-  def userSignup = Action(parse.json) { implicit req =>
+  def userSignup = Action { implicit req =>
     val user = userParamsBinding.bindFromRequest.get
     val fw   = new FileWriter("signups.txt", true)
     try {
