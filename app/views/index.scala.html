@@ -14,10 +14,10 @@
 			<div class="col-md-6 left-pic">
 				<div class="user-copy tourist">
 					<h2><div class="big">CONOCE</div><div> LA CIUDAD COMO SI VIVIERAS EN ELLA</div></h2>
-					<div class="input-group">
-						<input type="text" class="form-control email" placeholder="Email">
+					<div id="tourist-group" class="input-group">
+						<input id="tourist" type="text" class="form-control email" placeholder="Email">
 						<span class="input-group-btn">
-							<button class="btn btn-default" type="button">Me interesa</button>
+							<button id="touristBtn" class="btn btn-default" type="button">Me interesa</button>
 						</span>
 					</div>
 				</div>
@@ -25,10 +25,10 @@
 			<div class="col-md-6 right-pic">
 				<div class="user-copy local">
 					<h2><div class="big">RECOMIENDA</div><div> LOS LUGARES QUE SÓLO TÚ CONOCES</div></h2>
-					<div class="input-group">
-						<input type="text" class="form-control email" placeholder="Email">
+					<div id="local-group" class="input-group">
+						<input id="local" type="text" class="form-control email" placeholder="Email">
 						<span class="input-group-btn">
-							<button class="btn btn-default" type="button">Me interesa</button>
+							<button id="localBtn" class="btn btn-default" type="button">Me interesa</button>
 						</span>
 					</div>
 				</div>
@@ -61,4 +61,28 @@
 			Hecho con amor por viajeros • Copyright 2015
 		</div>
 	</div>
+
+	<script>
+		$("#touristBtn").click(function() {
+			$.ajax({
+				method: "POST",
+				url: "",
+				data: {"type": "tourist", "email": $("#tourist").val()},
+				success: function() {
+					$("#tourist-group").addClass("hidden");
+				}
+			});
+		});
+
+		$("#touristBtn").click(function() {
+			$.ajax({
+				method: "POST",
+				url: "",
+				data: {"type": "local", "email": $("#tourist").val()},
+				success: function() {
+					$("#local-group").addClass("hidden");
+				}
+			});
+		});
+	</script>
 }

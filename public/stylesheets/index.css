@@ -88,3 +88,7 @@
 	color: #737373;
 	text-align: right;
 }
+
+.hidden {
+	display: none;
+}
