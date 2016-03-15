@@ -64,25 +64,31 @@
 
 	<script>
 		$("#touristBtn").click(function() {
-			$.ajax({
-				method: "POST",
-				url: "signup",
-				data: {"type": "tourist", "email": $("#tourist").val()},
-				success: function() {
-					$("#tourist-group").addClass("hidden");
-				}
-			});
+      var email = $("#tourist").val();
+      if ( email !== '' ) {
+        $.ajax({
+          method: "POST",
+          url: "signup",
+          data: {"type": "tourist", "email": email},
+          success: function() {
+            $("#tourist-group").addClass("hidden");
+          }
+        });
+      }
 		});
 
 		$("#localBtn").click(function() {
-			$.ajax({
-				method: "POST",
-				url: "signup",
-				data: {"type": "local", "email": $("#local").val()},
-				success: function() {
-					$("#local-group").addClass("hidden");
-				}
-			});
+      var email = $("#tourist").val();
+      if ( email !== '' ) {
+        $.ajax({
+          method: "POST",
+          url: "signup",
+          data: {"type": "local", "email": email},
+          success: function() {
+            $("#local-group").addClass("hidden");
+          }
+        });
+      }
 		});
 	</script>
 }
